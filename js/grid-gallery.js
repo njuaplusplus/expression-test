@@ -649,7 +649,7 @@
 
 			if (o.linkProjects && last && !next && item.prevItem) {
 				//animate the "previous project" tooltip
-				$prevTooltip.stop().fadeIn();
+				// $prevTooltip.stop().fadeIn();
 				$larrowDiv.addClass('rotated');
 				lRotated = true;
 			}
@@ -672,7 +672,7 @@
 
 			if (o.linkProjects && first && item.prevItem) {
 				//animate the "previous project" tooltip
-				$prevTooltip.stop().show().fadeOut();
+				// $prevTooltip.stop().show().fadeOut();
 				if (lRotated) {
 					$larrowDiv.removeClass('rotated');
 				}
@@ -811,7 +811,7 @@
 			if (current === imgNum - 1) {
 				if(o.linkProjects && item.nextItem){
 					//show the next project tooltip
-					$nextTooltip.fadeIn();
+					// $nextTooltip.fadeIn();
 					$rarrowDiv.addClass('rotated');
 					rRotated = true;
 				}else{
@@ -832,7 +832,7 @@
 			if (current === 0) {
 				if(o.linkProjects && item.prevItem && both){
 					//show the previous project tooltip
-					$prevTooltip.fadeIn();
+					// $prevTooltip.fadeIn();
 					$larrowDiv.addClass('rotated');
 					lRotated = true;
 				}else if(!o.linkProjects || !item.prevItem){

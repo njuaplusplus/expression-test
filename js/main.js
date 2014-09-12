@@ -451,24 +451,37 @@ jQuery.support.placeholder = (function(){
 				imgw = imgSize.width,
 				imgh = imgSize.height,
 				args = {},
-				left = 0;
+				left = 0,
+				mtop = 0;
 			displayHeight = Math.round(winw * imgh / imgw);
 
 			if (displayHeight < currentHeight) {
+//				left = getImgLeftPosition($img);
+//				args = {
+//					width: ((currentHeight * imgw) / imgh),
+//					height: "auto",
+//					left: left
+//				};
+				mtop = (currentHeight - displayHeight) / 2;
+				args = {
+					width: "100%",
+					height: "auto",
+					top: mtop
+				};
+			} else {
 				left = getImgLeftPosition($img);
 				args = {
 					width: ((currentHeight * imgw) / imgh),
 					height: "auto",
-					left: left
+					left: left,
+					top: mtop
 				};
-			} else {
-				args = {
-					width: "100%",
-					height: "auto",
-					left: 0
-				};
+//				args = {
+//					width: "100%",
+//					height: "auto",
+//					left: 0
+//				};
 			}
-
 
 			if(!$img.is(":visible")){
 				animate = false;
