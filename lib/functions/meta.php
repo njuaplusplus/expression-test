@@ -133,21 +133,19 @@ if(!function_exists("pexeto_load_meta_boxes")){
 		array(
 
 		array(
-			"title" => "Video URL",
+			"title" => "视频连接",
 			"name" => "video",
 			"type" => "text",
-			"description" => 'If this is a "Video" post format, insert the video URL here.'
+			"description" => '如果这是一篇"视频"文章, 在此处插入视频链接.'
 			),
 		array(
-			"title" => "Gallery post type slider - display images from:",
+			"title" => "相册文章滑块 - 选择展示图片:",
 			"name" => "post_slider",
 			"type" => "select",
 			"options" => $gallery_post_sliders,
 			"std" => 'attachments',
-			'description' => 'Select where to load the images from when the post type is set as
-			a "Gallery" post type. If you select "Post Attachments", the images uploaded from this post
-			will be displayed. You can also choose a slider name created from '.PEXETO_THEMENAME.' 
-			Options -> Nivo Slider section.'
+			'description' => '当文章类型为"相册"时, 选择从何处载入图片. 如果你选择了"Post attachments", 那么在本文中上传的图片将会展示. 你也可以从 '.PEXETO_THEMENAME.' 
+			Options -> Nivo Slider 部分已经创建的滑块.'
 			)
 
 		);
