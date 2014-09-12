@@ -155,11 +155,11 @@ if(!function_exists("pexeto_load_meta_boxes")){
 		array(
 
 		array(
-			"title" => '<div class="ui-icon ui-icon-wrench"></div>General Page Settings',
+			"title" => '<div class="ui-icon ui-icon-wrench"></div>页面常规设置',
 			"type" => "heading"),
 
 		array(
-			"title" => "Header",
+			"title" => "头部",
 			"name" => "slider",
 			"type" => "select",
 			"options" => $sliders,
@@ -167,25 +167,23 @@ if(!function_exists("pexeto_load_meta_boxes")){
 			),
 
 			array(
-			"title" => "Page Layout",
+			"title" => "页面布局",
 			"name" => "layout",
 			"type" => "imageradio",
 			"options" => array(array("img"=>PEXETO_IMAGES_URL.'layout-right-sidebar.png', "id"=>"right", "title"=>"Right Sidebar Layout"),
 			array("img"=>PEXETO_IMAGES_URL.'layout-left-sidebar.png', "id"=>"left", "title"=>"Left Sidebar Layout"),
 			array("img"=>PEXETO_IMAGES_URL.'layout-full-width.png', "id"=>"full", "title"=>"Full Width Layout")),
 			"std" => 'right',
-			"description" => 'Available for Default and Contact page templates'
+			"description" => '对于默认和联系方式模板有效'
 			),
 
 			array(
-			"name" => "sidebar",
+			"name" => "边栏",
 			"title" => "Sidebar",
 			"type" => "select",
 			"options" => $pexeto_data->pexeto_sidebars,
-			"description" => 'You can select a sidebar for this page between the default one and another one that
-			you have created. If you would like to use another sidebar, rather than the default one, you can
-			create a new sidebar in "'.PEXETO_THEMENAME.' Options->Sidebars" section and after that you will be able to select the
-			sidebar here.'),
+			"description" => '你可以为这个页面选择一个默认的边栏或者你以创建的边栏. 如果你不想使用默认边栏, 你可以在 "'.PEXETO_THEMENAME.' Options->Sidebars" 部分创建新的边栏, 然后在这里选择.'
+			),
 			
 			array(
 			"name" => "show_title",
