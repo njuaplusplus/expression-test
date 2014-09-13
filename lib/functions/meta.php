@@ -178,92 +178,92 @@ if(!function_exists("pexeto_load_meta_boxes")){
 			),
 
 			array(
-			"name" => "边栏",
-			"title" => "Sidebar",
+			"title" => "边栏",
+			"name" => "sidebar",
 			"type" => "select",
 			"options" => $pexeto_data->pexeto_sidebars,
 			"description" => '你可以为这个页面选择一个默认的边栏或者你以创建的边栏. 如果你不想使用默认边栏, 你可以在 "'.PEXETO_THEMENAME.' Options->Sidebars" 部分创建新的边栏, 然后在这里选择.'
 			),
 			
 			array(
+			"title" => "显示页面标题",
 			"name" => "show_title",
-			"title" => "Display Page Title",
 			"type" => "select",
 			"options" => array(array("name"=>"Use Global Settings", "id"=>"global"),
 			array("name"=>"Display", "id"=>"on"),
 			array("name"=>"Hide", "id"=>"off")),
 			"std" => 'global',
-			"description" => 'Whether to display the page title or not - if "Use Global Settings" selected, the global setting selected in the
-			'.PEXETO_THEMENAME.' Options &raquo; General &raquo; "Display page title on pages" field will be used.'),
+			"description" => '是否显示页面标题 - 如果选择了 "Use Global Settings" , 那么会使用在
+			'.PEXETO_THEMENAME.' Options &raquo; General &raquo; "Display page title on pages" 中设定的值.'),
 			
 			array(
-			"title" => "Custom full width background image",
+			"title" => "自定义全宽度背景图片",
 			"name" => "full_bg",
 			"std" => "",
 			"type" => "upload",
-			"description" => 'You can globally set a full width background image in the '.PEXETO_THEMENAME.' Options &raquo; Style Settings  &raquo; 
-			General section. In this field you can set a custom background image that will be displayed for this page only. <br/>
-			Use the "<b>Upload Image</b>" button to upload a new image. If you would like to select an image from the Media Library,
-			click on the "<b>Use Media Library</b>" button. Once you select the image, click on the "Insert into post" button.'
+			"description" => '你可以在 '.PEXETO_THEMENAME.' Options &raquo; Style Settings  &raquo; 
+			General 部分设置全局的全宽度背景图片. 在这里你可以仅为这个页面进行设置背景图片. <br/>
+			使用 "<b>Upload Image</b>" 按钮来上传一个新的图片. 如果你想从多媒体库中选择一个图片,
+			点击 "<b>Use Media Library</b>" 按钮. 选择相应的图片后, 选择 "插入到文章" 按钮.'
 			),
 			
 			array(
-			"title" => '<div class="ui-icon ui-icon-image"></div>Gallery Settings - available only for the Portfolio Grid Gallery page template',
+			"title" => '<div class="ui-icon ui-icon-image"></div>相册设置 - 一下设置仅对 Portfolio Grid Gallery page 模板可用',
 			"type" => "heading"),
 
 			array(
+			"title" => "选择特定分类的 portfolio 项目",
 			"name" => "post_category",
-			"title" => "Display portfolio items from categories",
 			"type" => "select",
 			"none" => true,
 			"options" => $portf_categories,
 			"std" => '-1',
-			"description" => 'If "All Categories" selected, all the Portfolio items will be displayed. If another category is selected, only the Portfolio items that belong
-			to this category or this category\'s subcategories will be displayed. By selecting different categories, you can create multiple portfolio/gallery
-			pages with different items displayed.'),
+			"description" => '如果选择了 "All Categories", 会显示所有的 Portfolio 项目. 如果选择了特定的一个分类, 那仅仅这个分类及其子分类中的项目会显示. 
+			通过选择不同的分类, 你可以创建多个 portfolio/gallery 页面来展示不同的项目.'
+			),
 
 			array(
-			"name" => "order",
-			"title" => "Portfolio item order",
+			"title" => "Portfolio 项目顺序",
+			"name" => "order",			
 			"type" => "select",
 			"options" => array(array("name"=>"By Date", "id"=>"date"),
 			array("name"=>"By Custom Order", "id"=>"custom")),
 			"std" => 'date',
-			"description" => 'If you select "By Date" the last created item will be displayed first. If you select by "By Custom Order"
-			you will have to set the order field of each of the items - the items with the smaller order number will be displayed first.'),
+			"description" => '如果选择 "By Date" 那么最近创建的项目会先显示. 如果选择 "By Custom Order"
+			你需要设置每个项目的顺序 - 序号小的项目会先显示.'),
 
 
 			array(
-			"name" => "show_filter",
-			"title" => "Show portfolio category filter",
+			"title" => "显示 portfolio 分类筛选",
+			"name" => "show_filter",			
 			"type" => "select",
 			"options" => array(array("name"=>"Show", "id"=>"true"),
 			array("name"=>"Hide", "id"=>"false")),
 			"std" => 'true',
-			"description" => 'If "Show" selected, a category filter will be displayed above the portfolio items'),
+			"description" => '如果选择 "Show", 一个分类筛选器会在 portfolio 项目上显示'),
 
 
 			array(
-			"title" => "Number of portfolio items to show per load",
+			"title" => "每次载入显示的 portfolio 项目数",
 			"name" => "post_number",
 			"std" => "10",
 			"type" => "text"
 			),
 			
 			array(
-			"name" => "image_width",
-			"title" => "Base Image width",
+			"title" => "基本图像宽度",
+			"name" => "image_width",			
 			"type" => "text",
 			"std" => '300',
-			"description" => 'The base image width in the grid gallery for the smaller image - the bigger image sizes will be calculated based on this width (only for the Grid Gallery template)'
+			"description" => '网格相册中较小图片的基本图片宽度 - 大尺寸的图片尺寸会根据这个宽度计算 (仅对 the Grid Gallery 模板可用)'
 			),
 			
 			array(
-			"name" => "image_height",
-			"title" => "Base Image height",
+			"title" => "基本图像高度",
+			"name" => "image_height",			
 			"type" => "text",
 			"std" => '186',
-			"description" => 'The base image height in the grid gallery for the smaller image - the bigger image sizes will be calculated based on this height (only for the Grid Gallery template)'
+			"description" => '网格相册中较小图片的基本图片高度 - 大尺寸的图片尺寸会根据这个高度计算 (仅对 the Grid Gallery 模板可用)'
 			)
 			
 			);
