@@ -90,7 +90,7 @@ class PexetoOptionsManager{
 	public function print_footer(){
 		echo '</div></div><div id="pexeto-footer"><div id="follow-pexeto"> 
 			 </div><input type="hidden" name="action" value="save" />
-			 <input type="submit" value="Save Changes" class="save-button" />
+			 <input type="submit" value="保存更改" class="save-button" />
 			 </div>	
 			</form></div>';
 	}
