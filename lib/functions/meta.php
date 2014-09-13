@@ -12,7 +12,7 @@
  */
 add_action('init', 'pexeto_load_meta_boxes');
 
-add_action('add_meta_boxes', 'pexeto_portfolio_image_box');
+//add_action('add_meta_boxes', 'pexeto_portfolio_image_box');
 add_action('add_meta_boxes', 'pexeto_init_meta_boxes');  
 
 add_action('save_post', 'pexeto_save_postdata');  
@@ -24,7 +24,7 @@ if(!function_exists("pexeto_portfolio_image_box")){
 	function pexeto_portfolio_image_box() {
 		
 		
-		add_meta_box('portfoliogallery', __('Add images to the item', 'pexeto'), 'pexeto_gallery_meta_box', PEXETO_PORTFOLIO_POST_TYPE, 'normal', 'high');
+		//add_meta_box('portfoliogallery', __('Add images to the item', 'pexeto'), 'pexeto_gallery_meta_box', PEXETO_PORTFOLIO_POST_TYPE, 'normal', 'high');
 	}
 }
 
@@ -212,39 +212,39 @@ if(!function_exists("pexeto_load_meta_boxes")){
 			"type" => "heading"),
 
 			array(
-			"title" => "选择特定分类的 portfolio 项目",
+			"title" => "选择特定分类的作品项目",
 			"name" => "post_category",
 			"type" => "select",
 			"none" => true,
 			"options" => $portf_categories,
 			"std" => '-1',
-			"description" => '如果选择了 "All Categories", 会显示所有的 Portfolio 项目. 如果选择了特定的一个分类, 那仅仅这个分类及其子分类中的项目会显示. 
-			通过选择不同的分类, 你可以创建多个 portfolio/gallery 页面来展示不同的项目.'
+			"description" => '如果选择了 "All Categories", 会显示所有的作品项目. 如果选择了特定的一个分类, 那仅仅这个分类及其子分类中的项目会显示. 
+			通过选择不同的分类, 你可以创建多个 作品/相册 页面来展示不同的项目.'
 			),
 
 			array(
-			"title" => "Portfolio 项目顺序",
+			"title" => "作品项目顺序",
 			"name" => "order",			
 			"type" => "select",
 			"options" => array(array("name"=>"按日期", "id"=>"date"),
 			array("name"=>"按自定义顺序", "id"=>"custom")),
 			"std" => 'date',
-			"description" => '如果选择 "By Date" 那么最近创建的项目会先显示. 如果选择 "By Custom Order"
+			"description" => '如果选择 "按日期" 那么最近创建的项目会先显示. 如果选择 "按自定义顺序"
 			你需要设置每个项目的顺序 - 序号小的项目会先显示.'),
 
 
 			array(
-			"title" => "显示 portfolio 分类筛选",
+			"title" => "显示作品分类筛选",
 			"name" => "show_filter",			
 			"type" => "select",
 			"options" => array(array("name"=>"显示", "id"=>"true"),
 			array("name"=>"隐藏", "id"=>"false")),
 			"std" => 'true',
-			"description" => '如果选择 "显示", 一个分类筛选器会在 portfolio 项目上显示'),
+			"description" => '如果选择 "显示", 一个分类筛选器会在作品项目上显示'),
 
 
 			array(
-			"title" => "每次载入显示的 portfolio 项目数",
+			"title" => "每次载入显示的作品项目数",
 			"name" => "post_number",
 			"std" => "10",
 			"type" => "text"
@@ -289,7 +289,7 @@ if(!function_exists("pexeto_load_meta_boxes")){
 			array("name"=>"视频项目", "id"=>"video"),
 			array("name"=>"自定义链接", "id"=>"custom")),
 			"std" => "slider_full_width",
-			"description" => '选择 portfolio 项目类型. 网格相册中点击效果会受此影响. 对于照片选择 "全宽度相册"'
+			"description" => '选择作品项目类型. 网格相册中点击效果会受此影响. 对于照片选择 "全宽度相册"'
 			),
 			
 			array(

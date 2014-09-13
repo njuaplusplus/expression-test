@@ -11,14 +11,14 @@ foreach($portf_taxonomies as $taxonomy){
 }
 
 $pexeto_pages_options= array( array(
-"name" => "Page Settings",
+"name" => "页面设置",
 "type" => "title",
 "img" => PEXETO_IMAGES_URL."icon_home.png"
 ),
 
 array(
 "type" => "open",
-"subtitles"=>array(array("id"=>"blog", "name"=>"Blog"),array("id"=>"contact", "name"=>"Contact"))
+"subtitles"=>array(array("id"=>"blog", "name"=>"博客"),array("id"=>"contact", "name"=>"联系"))
 ),
 
 /* ------------------------------------------------------------------------*
@@ -33,16 +33,16 @@ array(
 
 
 array(
-"name" => "Page Layout",
+"name" => "页面布局",
 "id" => PEXETO_SHORTNAME."_blog_layout",
 "type" => "select",
-"options" => array(array('id'=>'right','name'=>'Right Sidebar'), array('id'=>'left','name'=>'Left Sidebar'), array('id'=>'full','name'=>'Full width')),
+"options" => array(array('id'=>'right','name'=>'右边栏'), array('id'=>'left','name'=>'左边栏'), array('id'=>'full','name'=>'全宽度')),
 "std" => 'right',
 "desc" => 'This layout setting will affect the blog page, blog posts template, archives and search pages'
 ),
 
 array(
-"name" => "Blog sidebar",
+"name" => "博客边栏",
 "id" => PEXETO_SHORTNAME."_blog_sidebar",
 "type" => "select",
 "options" => $pexeto_data->pexeto_sidebars,
@@ -52,7 +52,7 @@ array(
 
 
 array(
-"name" => "Header",
+"name" => "头部",
 "id" => PEXETO_SHORTNAME."_home_slider",
 "type" => "select",
 "options" => pexeto_get_created_sliders(),
@@ -62,14 +62,14 @@ on the blog. By default the Default slider for each slider type is displayed.'
 ),
 
 array(
-"name" => "Static Image URL",
+"name" => "静态图片 URL",
 "id" => PEXETO_SHORTNAME."_blog_static_image",
 "type" => "upload",
 "desc" => 'The header image URL when "Static Header Image" selected above. Optimal image size: 980 x 370 pixels.',
 ),
 
 array(
-"name" => "Exclude categories from blog",
+"name" => "博客不显示的分类",
 "id" => PEXETO_SHORTNAME."_exclude_cat_from_blog",
 "type" => "multicheck",
 "options" => $pexeto_categories,
@@ -77,7 +77,7 @@ array(
 "desc" => "You can select which categories not to be shown on the blog"),
 
 array(
-"name" => "Number of posts per page",
+"name" => "每页文章数",
 "id" => PEXETO_SHORTNAME."_post_per_page_on_blog",
 "type" => "text",
 "std" => "5"
@@ -85,7 +85,7 @@ array(
 
 
 array(
-"name" => "Show sections from post info",
+"name" => "文章信息显示",
 "id" => PEXETO_SHORTNAME."_exclude_post_sections",
 "type" => "multicheck",
 "options" => array(array("id"=>"date", "name"=>"Post Date"), array("id"=>"author", "name"=>"Post Author"), array("id"=>"category", "name"=>"Post Category"), array("id"=>"comments", "name"=>"Comment Number")),
@@ -95,7 +95,7 @@ array(
 ,
 
 array(
-"name" => "Show post summary as",
+"name" => "文章摘要显示形式",
 "id" => PEXETO_SHORTNAME."_post_summary",
 "type" => "select",
 "options" => array(array('id'=>'readmore','name'=>"Separated with 'More' tag"), array('id'=>'excerpt','name'=>"Excerpt")),
@@ -121,7 +121,7 @@ array(
 ),
 
 array(
-"name" => "Email to which to send contact form message",
+"name" => "联系邮箱",
 "id" => PEXETO_SHORTNAME."_email",
 "type" => "text"),
 
