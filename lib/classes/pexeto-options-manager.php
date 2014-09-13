@@ -81,7 +81,7 @@ class PexetoOptionsManager{
 			}
 		}
 
-		echo '</ul></div></div><div id="content"><div id="header"><h3 id="theme_name">'.$this->themename.' v.'.$this->pexeto_version.'</h3><a class="more-button" href="http://themeforest.net/user/pexeto/portfolio"></a></div><div id="options_container">';
+		echo '</ul></div></div><div id="content"><div id="header"></div><div id="options_container">';
 	}
 	
 	/**
@@ -89,11 +89,7 @@ class PexetoOptionsManager{
 	 */
 	public function print_footer(){
 		echo '</div></div><div id="pexeto-footer"><div id="follow-pexeto"> 
-			 <p>Follow Pexeto on:</p><ul>
-			 <li><a href="http://twitter.com/pexeto" title="Pexeto on Twitter"><img src="'.$this->pexeto_images_url.'twitter.png" /></a></li>
-			 <li><a href="http://themeforest.net/user/pexeto/follow" title="Follow my work on ThemeForest"><img src="'.$this->pexeto_images_url.'tf.png" /></a></li>
-			 <li><a href="http://pexeto.com"><img src="'.$this->pexeto_images_url.'pex.png" title="Visit my website" /></a></li>
-			 </ul></div><input type="hidden" name="action" value="save" />
+			 </div><input type="hidden" name="action" value="save" />
 			 <input type="submit" value="Save Changes" class="save-button" />
 			 </div>	
 			</form></div>';

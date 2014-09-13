@@ -6,7 +6,7 @@ foreach($sociable_icons as $key=>$value){
 }
 
 $pexeto_general_options= array( array(
-"name" => "General",
+"name" => "常规设置",
 "type" => "title",
 "img" => PEXETO_IMAGES_URL."icon_general.png"
 ),
@@ -99,7 +99,7 @@ array(
 "type"=>"custom",
 "button_text"=>'添加边栏',
 "fields"=>array(
-	array('id'=>'_sidebar_name', 'type'=>'text', 'name'=>'Sidebar Name')
+	array('id'=>'_sidebar_name', 'type'=>'text', 'name'=>'边栏名')
 ),
 "desc"=>"You can add as many custom sidebars you like and after that for each page you will be
 able to assign a different sidebar."
