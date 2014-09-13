@@ -13,7 +13,7 @@ $pexeto_general_options= array( array(
 
 array(
 "type" => "open",
-"subtitles"=>array(array("id"=>"main", "name"=>"Main Settings"), array("id"=>"sidebars", "name"=>"Sidebars"), array("id"=>"sociable", "name"=>"Sociable Icons"), array("id"=>"seo", "name"=>"SEO"), array("id"=>"lightbox", "name"=>"Lightbox"), array("id"=>"update", "name"=>"Theme Update"))
+"subtitles"=>array(array("id"=>"main", "name"=>"主要设置"), array("id"=>"sidebars", "name"=>"边栏"), array("id"=>"sociable", "name"=>"社交图标"), array("id"=>"seo", "name"=>"SEO"))
 ),
 
 /* ------------------------------------------------------------------------*
@@ -26,23 +26,22 @@ array(
 ),
 
 array(
-"name" => "Favicon image URL",
+"name" => "网站图标 URL",
 "id" => PEXETO_SHORTNAME."_favicon",
 "type" => "upload",
-"desc" => "Upload a favicon image - with .ico extention."
+"desc" => "上传网站图标 - 扩展名为 .ico."
 ),
 
 array(
-"name" => "Display page title on pages",
+"name" => "显示页面标题",
 "id" => PEXETO_SHORTNAME."_show_page_title",
 "type" => "checkbox",
 "std" => 'on',
-"desc" => 'If "ON" selected, the page title will be displayed in the beginning of the page content
-as a main title. '
+"desc" => '如果选择 "ON", 页面标题会作为主标题显示在页面上. '
 ),
 
 array(
-"name" => "Display comments on pages",
+"name" => "显示页面评论",
 "id" => PEXETO_SHORTNAME."_page_comments",
 "type" => "checkbox",
 "std" => 'off',
@@ -52,14 +51,14 @@ Note: This option is available for the Default Page Template only'
 ),
 
 array(
-"name" => "Display comments on single portfolio posts",
+"name" => "显示单个作品文章评论",
 "id" => PEXETO_SHORTNAME."_portfolio_comments",
 "type" => "checkbox",
 "std" =>'off'
 ),
 
 array(
-"name" => "Disable right click",
+"name" => "禁止鼠标右键",
 "id" => PEXETO_SHORTNAME."_disable_click",
 "type" => "checkbox",
 "std" => 'off',
@@ -68,7 +67,7 @@ If you insert a text in the "Message on right click" field below, this message w
 ),
 
 array(
-"name" => "Message on right click",
+"name" => "鼠标右键提示信息",
 "id" => PEXETO_SHORTNAME."_click_message",
 "type" => "textarea",
 "desc" => "This is the message that is displayed when the mouse right click is disabled. If you leave the field empty, no message will be alerted."
@@ -95,10 +94,10 @@ array(
 ),
 
 array(
-"name"=>"Add Sidebar",
+"name"=>"添加边栏",
 "id"=>'sidebars',
 "type"=>"custom",
-"button_text"=>'Add Sidebar',
+"button_text"=>'添加边栏',
 "fields"=>array(
 	array('id'=>'_sidebar_name', 'type'=>'text', 'name'=>'Sidebar Name')
 ),
@@ -119,7 +118,7 @@ array(
 ),
 
 array(
-"name" => "Display sociable icons",
+"name" => "显示社交图标",
 "id" => PEXETO_SHORTNAME."_show_footer_icons",
 "type" => "checkbox",
 "std" => 'on',
@@ -129,15 +128,15 @@ array(
 
 
 array(
-"name"=>"Add a sociable icon",
+"name"=>"添加社交图标",
 "id"=>'sociable_icons',
 "type"=>"custom",
-"button_text"=>'Add Icon',
+"button_text"=>'添加图标',
 "preview"=>'_icon_url',
 "fields"=>array(
 array('id'=>'_icon_url', 'type'=>'imageselect', 'name'=>'Select Icon','options'=>$sociable_icons),
-	array('id'=>'_icon_link', 'type'=>'text', 'name'=>'Sociable Site Link'),
-	array('id'=>'_icon_title', 'type'=>'text', 'name'=>'Hover title (optional)')
+	array('id'=>'_icon_link', 'type'=>'text', 'name'=>'社交图标链接'),
+	array('id'=>'_icon_title', 'type'=>'text', 'name'=>'悬浮提示 (可选)')
 )
 ),
 
@@ -154,24 +153,15 @@ array(
 ),
 
 array(
-"type" => "documentation",
-"text" => '<div class="note_box">
-		 <b>Note: </b> This section contains some basic SEO options. For more advanced options, you may consider
-		 using a SEO plugin - some plugins that we recommend are <a href="http://wordpress.org/extend/plugins/wordpress-seo/">WordPress SEO by Yoast</a> 
-		 and <a href="http://wordpress.org/extend/plugins/all-in-one-seo-pack/">All in One SEO Pack</a>
-		</div>'
-),
-
-array(
-"name" => "Site keywords",
+"name" => "网站关键字",
 "id" => PEXETO_SHORTNAME."_seo_keywords",
 "type" => "text",
-"desc" => 'The main keywords that describe your site, separated by commas. Example:<br />
+"desc" => '描述你网站的主要关键字 (请使用英文!), 用 "英文逗号" 隔开. 例如:<br />
 <i>photography,design,art</i>'
 ),
 
 array(
-"name" => "Home Page Description",
+"name" => "主页说明",
 "id" => PEXETO_SHORTNAME."_seo_description",
 "type" => "textarea",
 "desc" => "By default the Tagline set in <b>Settings &raquo; General</b> will be displayed as a description of the site. Here
@@ -179,7 +169,7 @@ you can set a description that will be displayed on your home page only."
 ),
 
 array(
-"name" => "Home page title",
+"name" => "主页标题",
 "id" => PEXETO_SHORTNAME."_seo_home_title",
 "type" => "text",
 "desc" => 'This is the home page document title. By default the blog name is displayed and if you insert a title here,
@@ -187,7 +177,7 @@ it will be prepended to the blog name'
 ),
 
 array(
-"name" => "Page title separator",
+"name" => "页面标题分隔符",
 "id" => PEXETO_SHORTNAME."_seo_serapartor",
 "type" => "text",
 "std" => '@',
@@ -195,7 +185,7 @@ array(
 ),
 
 array(
-"name" => "Page title for category browsing",
+"name" => "浏览分类页面标题",
 "id" => PEXETO_SHORTNAME."_seo_category_title",
 "type" => "text",
 "std" => 'Category &raquo; ',
@@ -204,7 +194,7 @@ text entered here, the name of the category and the name of the blog - for examp
 ),
 
 array(
-"name" => "Page title for tag browsing",
+"name" => "浏览标签页面标题",
 "id" => PEXETO_SHORTNAME."_seo_tag_title",
 "type" => "text",
 "std" => 'Tag &raquo; ',
@@ -213,7 +203,7 @@ text entered here, the name of the tag and the name of the blog - for example:<b
 ),
 
 array(
-"name" => "Page title for search results",
+"name" => "搜索页面标题",
 "id" => PEXETO_SHORTNAME."_search_tag_title",
 "type" => "text",
 "std" => 'Search results &raquo; ',
@@ -222,7 +212,7 @@ text entered here, the search query and the name of the blog - for example:<br /
 ),
 
 array(
-"name" => "Exclude pages from indexation",
+"name" => "排除一下页面索引",
 "id" => PEXETO_SHORTNAME."_seo_indexation",
 "type" => "multicheck",
 "options" => array(array('id'=>'category', 'name'=>'Category Archive'), array('id'=>'date', 'name'=>'Date Archive'), array('id'=>'tag', 'name'=>'Tag Archive'), array('id'=>'author', 'name'=>'Author Archive'), array('id'=>'search', 'name'=>'Search Results')),
@@ -234,84 +224,6 @@ content. Therefore, excluding the pages from this option will remove the search 
 
 array(
 "type" => "close"),
-
-/* ------------------------------------------------------------------------*
- * LIGHTBOX
- * ------------------------------------------------------------------------*/
-
-array(
-"type" => "subtitle",
-"id"=>'lightbox'
-),
-
-array(
-"name" => "Lightbox Theme",
-"id" => PEXETO_SHORTNAME."theme",
-"type" => "select",
-"options" => array(array('id'=>'light_rounded','name'=>'Light Rounded'), 
-					array('id'=>'dark_rounded','name'=>'Dark Rounded'), 
-					array('id'=>'pp_default','name'=>'Default'),
-					array('id'=>'facebook','name'=>'Facebook'),
-					array('id'=>'light_square','name'=>'Light Square'),
-					array('id'=>'dark_square','name'=>'Dark Square')),
-
-"std" => 'light_rounded',
-"desc" => 'This is the global theme setting for the PrettyPhoto lightbox.'
-),
-
-array(
-"name" => "Animation Speed",
-"id" => PEXETO_SHORTNAME."animation_speed",
-"type" => "select",
-"options" => array(array('id'=>'normal','name'=>'Normal'), 
-					array('id'=>'fast','name'=>'Fast'), 
-					array('id'=>'slow','name'=>'Slow')),
-"std" => 'normal'
-),
-
-array(
-"name" => "Overlay Gallery",
-"id" => PEXETO_SHORTNAME."overlay_gallery",
-"type" => "checkbox",
-"std" => 'off',
-"desc" => 'If enabled, on lightbox galleries a small gallery of thumbnails will be displayed in the bottom of the preview image.'),
-
-array(
-"name" => "Resize image to fit window",
-"id" => PEXETO_SHORTNAME."allow_resize",
-"type" => "checkbox",
-"std" => 'on',
-"desc" => 'If enabled, when the image is bigger than the window, it will be resized to fit it. Otherwise, the image will be displayed in its full size.'),
-
-array(
-"type" => "close"),
-
-/* ------------------------------------------------------------------------*
- * THEME UPDATE
- * ------------------------------------------------------------------------*/
-
-array(
-"type" => "subtitle",
-"id"=>'update'
-),
-
-array(
-"name" => "Envato Marketplace Username",
-"id" => PEXETO_SHORTNAME."_tf_username",
-"type" => "text",
-"desc" => "If you would like to have an option to automatically update the theme from the admin panel, you have to insert the username of the account you used to purchase the theme from ThemeForest. For more information you can refer to the \"Updates\" section of the documentation."
-),
-
-array(
-"name" => "Envato Marketplace API Key",
-"id" => PEXETO_SHORTNAME."_tf_api_key",
-"type" => "text",
-"desc" => "If you would like to have an option to automatically update the theme from the admin panel, you have to insert your API Key here. To obtain your API Key, visit your \"My Settings\" page on any of the Envato Marketplaces (ThemeForest). For more information you can refer to the \"Updates\" section of the documentation."
-),
-
-array(
-"type" => "close"),
-
 
 array(
 "type" => "close"));
