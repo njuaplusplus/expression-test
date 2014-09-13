@@ -189,11 +189,11 @@ if(!function_exists("pexeto_load_meta_boxes")){
 			"title" => "显示页面标题",
 			"name" => "show_title",
 			"type" => "select",
-			"options" => array(array("name"=>"Use Global Settings", "id"=>"global"),
-			array("name"=>"Display", "id"=>"on"),
-			array("name"=>"Hide", "id"=>"off")),
+			"options" => array(array("name"=>"使用全局设置", "id"=>"global"),
+			array("name"=>"显示", "id"=>"on"),
+			array("name"=>"隐藏", "id"=>"off")),
 			"std" => 'global',
-			"description" => '是否显示页面标题 - 如果选择了 "Use Global Settings" , 那么会使用在
+			"description" => '是否显示页面标题 - 如果选择了 "使用全局设置" , 那么会使用在
 			'.PEXETO_THEMENAME.' Options &raquo; General &raquo; "Display page title on pages" 中设定的值.'),
 			
 			array(
@@ -226,8 +226,8 @@ if(!function_exists("pexeto_load_meta_boxes")){
 			"title" => "Portfolio 项目顺序",
 			"name" => "order",			
 			"type" => "select",
-			"options" => array(array("name"=>"By Date", "id"=>"date"),
-			array("name"=>"By Custom Order", "id"=>"custom")),
+			"options" => array(array("name"=>"按日期", "id"=>"date"),
+			array("name"=>"按自定义顺序", "id"=>"custom")),
 			"std" => 'date',
 			"description" => '如果选择 "By Date" 那么最近创建的项目会先显示. 如果选择 "By Custom Order"
 			你需要设置每个项目的顺序 - 序号小的项目会先显示.'),
@@ -237,10 +237,10 @@ if(!function_exists("pexeto_load_meta_boxes")){
 			"title" => "显示 portfolio 分类筛选",
 			"name" => "show_filter",			
 			"type" => "select",
-			"options" => array(array("name"=>"Show", "id"=>"true"),
-			array("name"=>"Hide", "id"=>"false")),
+			"options" => array(array("name"=>"显示", "id"=>"true"),
+			array("name"=>"隐藏", "id"=>"false")),
 			"std" => 'true',
-			"description" => '如果选择 "Show", 一个分类筛选器会在 portfolio 项目上显示'),
+			"description" => '如果选择 "显示", 一个分类筛选器会在 portfolio 项目上显示'),
 
 
 			array(
@@ -278,93 +278,90 @@ if(!function_exists("pexeto_load_meta_boxes")){
 			array(
 
 			array(
-			"title" => "Item Type",
+			"title" => "项目类型",
 			"name" => "action",
 			"type" => "select",
 			"options" => array(
-			array("name"=>"Full-height Slider", "id"=>"slider_full_height"),
-			array("name"=>"Full-width Slider", "id"=>"slider_full_width"),
-			array("name"=>"Lightbox Gallery", "id"=>"lightbox"),
-			array("name"=>"Standard page", "id"=>"standard"),
-			array("name"=>"Video Item", "id"=>"video"),
-			array("name"=>"Custom link", "id"=>"custom")),
-			"std" => "slider_full_height",
-			"description" => "Select the type of the portfolio item. The click action in the Grid Gallery page will depend on the type you select."
+			// array("name"=>"全高度相册", "id"=>"slider_full_height"),
+			array("name"=>"全宽度相册", "id"=>"slider_full_width"),
+			// array("name"=>"轻量级相册", "id"=>"lightbox"),
+			// array("name"=>"标准页面", "id"=>"standard"),
+			array("name"=>"视频项目", "id"=>"video"),
+			array("name"=>"自定义链接", "id"=>"custom")),
+			"std" => "slider_full_width",
+			"description" => '选择 portfolio 项目类型. 网格相册中点击效果会受此影响. 对于照片选择 "全宽度相册"'
 			),
 			
 			array(
-			"title" => "Custom Link/Video URL",
+			"title" => "自定义 链接/视频 URL",
 			"name" => "custom",
 			"std" => "",
 			"type" => "text",
-			"description" => 'If "Video Item" is selected as "Item type", you can insert a video URL here. If "Custom link" selected above, 
-			you can insert the custom URL.'
+			"description" => '如果 "项目类型" 为 "视频项目", 你可以在这里插入一个视频的 URL. 如果选择了 "自定义链接", 
+			你可以插入一个自定义的 URL.'
 			),
 			
 			array(
-			"title" => "Video Description",
+			"title" => "视频描述",
 			"name" => "description",
 			"std" => "",
 			"type" => "textarea",
-			"description" => 'If "Video Item" is selected as "Item type", you can insert a description in this field that will be displayed below the image/video in lightbox.'
+			"description" => '如果 "项目类型" 为 "视频项目", 你这里输入的描述信息会显示在图片/视频下面.'
 			),
 
 
 			array(
-			"title" => '<div class="ui-icon ui-icon-image"></div>Grid Gallery items settings only',
+			"title" => '<div class="ui-icon ui-icon-image"></div>仅对网格相册项目的设置',
 			"type" => "heading"),
 			
 			array(
-			"title" => "Image Layout - number of columns and rows to allocate",
+			"title" => "图片布局 - 分配的行列数目",
 			"name" => "img_layout",
 			"class" => "layout",
 			"type" => "multiple-text",
 			"std" => "1",
 			"elements" => array( array(
-				"title" => "Columns",
+				"title" => "列数",
 				"name" => "img_columns",
 				"type" => "text",
 				"std" => "1"
 				),
 
 				array(
-				"title" => "Rows",
+				"title" => "行数",
 				"name" => "img_rows",
 				"type" => "text",
 				"std" => "1"
 				)),
-			"description" => 'The base image(column/row) size can be set in the edit options of the gallery page. This value sets how many columns and rows the image should allocate.'
+			"description" => '基本图片 (列/行) 的大小可以在相册页面中的编辑选项中设定. 这里设置该图片需要占用多少空间.'
 			),
 
 				array(
-			"title" => "Crop thumbnail image from",
+			"title" => "剪裁缩略图方式",
 			"name" => "crop",
 			"type" => "imageradio",
-			"options" => array(array("img"=>PEXETO_IMAGES_URL.'crop-c.png', "id"=>"c", "title"=>"Center"),
-			array("img"=>PEXETO_IMAGES_URL.'crop-t.png', "id"=>"t", "title"=>"Top"),
-			array("img"=>PEXETO_IMAGES_URL.'crop-b.png', "id"=>"b", "title"=>"Bottom"),
-			array("img"=>PEXETO_IMAGES_URL.'crop-l.png', "id"=>"l", "title"=>"Left"),
-			array("img"=>PEXETO_IMAGES_URL.'crop-r.png', "id"=>"r", "title"=>"Right")
+			"options" => array(array("img"=>PEXETO_IMAGES_URL.'crop-c.png', "id"=>"c", "title"=>"居中"),
+			array("img"=>PEXETO_IMAGES_URL.'crop-t.png', "id"=>"t", "title"=>"顶部"),
+			array("img"=>PEXETO_IMAGES_URL.'crop-b.png', "id"=>"b", "title"=>"底部"),
+			array("img"=>PEXETO_IMAGES_URL.'crop-l.png', "id"=>"l", "title"=>"左侧"),
+			array("img"=>PEXETO_IMAGES_URL.'crop-r.png', "id"=>"r", "title"=>"右侧")
 			),
 			"std" => "c",
-			"description" => 'This option is available when the thumbnail will be automatically generated from the preview image (when the "Thumbnail URL" field above is empty)- you can see above how the cropping settings will affect both portrait and landscape oriented images.
-			'
+			"description" => '当缩略图由特色图片自动生成时会使用这个选项 (当 "缩略图 URL" 留空时)- 如图所示, 该选项会影响横向和纵向图片.'
 			),
 
 			array(
-			"title" => "Custom Thumbnail URL",
+			"title" => "自定义缩略图 URL",
 			"name" => "thumbnail",
 			"std" => "",
 			"type" => "upload",
-			"description" => 'By default the theme will generate automatically the thumbnail image for the item from
-			the image you set as featured (or if a featured image is not set, the first image from the uploaded images). However, if you prefer to manually set
-			this thumbnail image, you can set its URL in this field.<br />
-			Use the "<b>Upload Image</b>" button to upload a new image. If you would like to select an image from the Media Library,
-			click on the "<b>Use Media Library</b>" button. Once you select the image, click on the "Insert into post" button.'
+			"description" => '自定义缩略图, 建议使用此项.<br />
+			使用 "<b>Upload Image</b>" 按钮来上传一个新的图片. 如果你想从多媒体库中选择一个图片,
+			使用 "<b>Use Media Library</b>" 按钮. 选择相应的图片后, 选择 "插入到文章" 按钮.'
 			),
 
 			array(
-			"title" => '<div class="ui-icon ui-icon-image"></div>Standard page item type settings',
+			"title" => '<div class="ui-icon ui-icon-image"></div>标准页面类型设置',
 			"type" => "heading"),
 
 				array(
@@ -372,19 +369,19 @@ if(!function_exists("pexeto_load_meta_boxes")){
 			"title" => "Layout",
 			"type" => "select",
 			"class" => "two-columns",
-			"options" => array(array("name"=>"Right sidebar", "id"=>"right"),
-			array("name"=>"Left sidebar", "id"=>"left"),
-			array("name"=>"Full-width", "id"=>"full")),
+			"options" => array(array("name"=>"右边栏", "id"=>"right"),
+			array("name"=>"左边栏", "id"=>"left"),
+			array("name"=>"全宽度", "id"=>"full")),
 			"std" => 'right',
-			"description" => 'This is the layout of the single item page - this option will affect the single item page when the item type is one of the following: "Standard Page", "Video Item" or "Lightbox Gallery"'),
+			"description" => '这是单个项目的布局 - 当项目类型为 "视频项目" 时, 该选项会影响单个项目页面.'),
 			
 				array(
+			"title" => "边栏",
 			"name" => "sidebar",
-			"class" => "two-columns last",
-			"title" => "Sidebar",
+			"class" => "two-columns last",			
 			"type" => "select",
 			"options" => $pexeto_data->pexeto_sidebars,
-			"description" => 'The sidebar of the single item page - this option will affect the single item page when the item type is one of the following: "Standard Page", "Video Item" or "Lightbox Gallery"'),
+			"description" => '单个项目页面的边栏 - 当项目类型为 "视频项目" 时, 该选项会影响单个项目页面.'),
 
 	);
 
