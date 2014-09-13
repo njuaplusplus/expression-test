@@ -26,8 +26,8 @@ if(!function_exists("pexeto_register_portfolio_category")){
 		register_taxonomy("portfolio_category",
 		array(PEXETO_PORTFOLIO_POST_TYPE),
 		array(	"hierarchical" => true,
-				"label" => "Portfolio Categories", 
-				"singular_label" => "Portfolio Categories", 
+				"label" => "作品分类",
+				"singular_label" => "作品分类",
 				"rewrite" => true,
 				"query_var" => true
 		));
@@ -42,16 +42,16 @@ if(!function_exists("pexeto_register_portfolio_post_type")){
 
 		//the labels that will be used for the portfolio items
 		$labels = array(
-			    'name' => _x('Portfolio', 'portfolio name', 'pexeto'),
+			    'name' => _x('作品', 'portfolio name', 'pexeto'),
 			    'singular_name' => _x('Portfolio Item', 'portfolio type singular name', 'pexeto'),
-			    'add_new' => _x('Add New', 'portfolio', 'pexeto'),
+			    'add_new' => _x('新建', 'portfolio', 'pexeto'),
 			    'add_new_item' => __('Add New Item', 'pexeto'),
 			    'edit_item' => __('Edit Item', 'pexeto'),
 			    'new_item' => __('New Portfolio Item', 'pexeto'),
 			    'view_item' => __('View Item', 'pexeto'),
-			    'search_items' => __('Search Portfolio Items', 'pexeto'),
-			    'not_found' =>  __('No portfolio items found', 'pexeto'),
-			    'not_found_in_trash' => __('No portfolio items found in Trash', 'pexeto'), 
+			    'search_items' => __('搜索作品项目', 'pexeto'),
+			    'not_found' =>  __('没有找到作品项目', 'pexeto'),
+			    'not_found_in_trash' => __('没有在回收站中找到作品项目', 'pexeto'), 
 			    'parent_item_colon' => ''
 			    );
 
@@ -70,8 +70,8 @@ if(!function_exists("pexeto_register_portfolio_post_type")){
 
 if(!function_exists("portfolio_columns")){
 	function portfolio_columns($columns) {
-		$columns['category'] = 'Portfolio Category';
-		$columns['featured'] = 'Featured Image';
+		$columns['category'] = '作品分类';
+		$columns['featured'] = '特色图片';
 		return $columns;
 	}
 }
