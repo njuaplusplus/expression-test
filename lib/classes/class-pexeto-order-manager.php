@@ -8,7 +8,7 @@ class PexetoOrderManager {
 
 	protected $post_type;
 	protected $nonce_id = 'custom_order_nonce';
-	public $title = 'Custom Order';
+	public $title = '自定义顺序';
 	const slug = '_custom_order';
 
 	/**
@@ -64,12 +64,9 @@ class PexetoOrderManager {
 		$html='<div id="custom-order-wrapper">
 		<h2 class="co-title"><span><i aria-hidden="true" class="dashicons dashicons-format-gallery"></i></span>'
 		.$this->post_type.' '.$this->title.'</h2>
-		<p>Drag and drop the items to change their default order and click on the
-		"Save Order" button to save the changes. This order will be applied to
-		the items in the displaying page when the page is set to order its items
-		by "Custom order". Changing the order of the listed items will update the
-		"Order" field of each of the items.</p>
-		<a id="co-save-btn" class="button">Save Order</a>
+		<p>拖动放置项目来改变默认顺序, 然后点击 "保存顺序" 按钮来保存设置. 当页面属性设置为 "自定义顺序"
+		时, 会使用这个顺序. 改变下面的列表会修改每个项目的 "顺序" 值.</p>
+		<a id="co-save-btn" class="button">保存顺序</a>
 		<ul id="co-ul" data-post_type="'.$this->post_type.'"
 		data-nonce="'.wp_create_nonce( $this->nonce_id ).'">';
 
