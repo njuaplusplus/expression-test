@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: Contact form page
+ Template Name: 联系页面
  This page template displays the content and after that - a contact form.
  */
 

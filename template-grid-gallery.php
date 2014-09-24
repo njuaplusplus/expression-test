@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: Portfolio Grid Gallery
+ Template Name: 作品相册
  Displays the portfolio items in a grid, separated by pages. The items can be also
  filtered by a category.
  */

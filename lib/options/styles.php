@@ -13,7 +13,7 @@ for($i=1; $i<=34; $i++){
 
 
 $pexeto_styles_options=array(array(
-"name" => "Style settings",
+"name" => "样式设置",
 "type" => "title",
 "img" => PEXETO_IMAGES_URL.'icon_style.png'
 ),
@@ -33,47 +33,45 @@ array(
 ),
 
 array(
-"name" => "Predefined Background Colors",
+"name" => "预定义背景色",
 "id" => PEXETO_SHORTNAME."_body_bg",
 "type" => "stylecolor",
 "options" => array("","4A4A4A","62786e","83988e","919999","556270","6a9199","b0b0b0","70B0A0","9ab895","99b2b7","257ea8","547980","5e8c6a","574951","9d5c56","8c778f","b38184"),
 "std" => '',
-"desc" => 'You can either select a predefined background color or pick your custom color below. If the first option
-is selected, the background color will be set as the default background of the skin selected.'
+"desc" => '你可以选择预定义的颜色, 或者在下面指定你自己的颜色. 如果你选择预定义中的第一项, 那么背景色将会与主题颜色一致.'
 ),
 
 array(
-"name" => "Custom Background Color",
+"name" => "自定义背景色",
 "id" => PEXETO_SHORTNAME."_custom_body_bg",
 "type" => "color",
-"desc" => 'You can select a custom background color for your theme. This field has priority over the "Predefined Background Colors" field above. '
+"desc" => '你可以自定义你主题的背景色. 这个值优先于上面的预定义背景色. '
 ),
 
 array(
-"name" => "Background Pattern",
+"name" => "背景图案",
 "id" => PEXETO_SHORTNAME."_pattern",
 "type" => "pattern",
 "options" => $patterns,
-"desc" => 'Here you can choose the pattern for the theme. There are 2 types of patterns - the first 17 patterns best suit
-light backgrounds, the rest of them best suit darker backgrounds.'
+"desc" => '你可以选择你的背景图案. 这里有两类图案 - 前 17 个图案 适合浅色背景, 其他的适合深色背景.'
 ),
 
 array(
-"name" => "Custom Background Pattern",
+"name" => "自定义背景图案",
 "id" => PEXETO_SHORTNAME."_custom_pattern",
 "type" => "upload",
-"desc" => 'You can upload your custom background image here.'
+"desc" => '你可以上传自定义的背景图案.'
 ),
 
 array(
-"name" => "Full Width Background Image",
+"name" => "全宽背景图片",
 "id" => PEXETO_SHORTNAME."_fullwidth_bg_image",
 "type" => "upload",
-"desc" => 'You can upload a custom background image that will be displayed in full width size.'
+"desc" => '你可以上传一张图片, 来作为全宽的背景.'
 ),
 
 array(
-"name" => "Overlay pattern on fullscreen images",
+"name" => "在全屏图片上显示图案",
 "id" => PEXETO_SHORTNAME."_bg_top_pattern",
 "type" => "checkbox",
 "std" => 'on',
@@ -81,14 +79,14 @@ array(
 ),
 
 array(
-"name" => "Main body text size",
+"name" => "正文字体大小",
 "id" => PEXETO_SHORTNAME."_body_text_size",
 "type" => "text",
-"desc" => "The main body font size in pixels. Default: 13"
+"desc" => "正文字体大小, 单位为像素. 默认: 13"
 ),
 
 array(
-"name" => "Additional CSS styles",
+"name" => "额外的 CSS 样式",
 "id" => PEXETO_SHORTNAME."_additional_styles",
 "type" => "textarea",
 "desc" => "You can insert some more additional CSS code here. If you would like to do some modifications to the theme's CSS, it is better to insert the modifications in this field rather than modifying the original style.css file, as the modifications in this field will remain saved trough the theme updates."
@@ -107,44 +105,42 @@ array(
 ),
 
 array(
-"name" => "Logo image",
+"name" => "Logo 图像",
 "id" => PEXETO_SHORTNAME."_logo_image",
 "type" => "upload",
-"desc" => "If you wouldn't like to use the uploader: if the image is located within the images folder you can just insert images/image-name.jpg, otherwise
-you have to insert the full URL of the image, for example: http://site.com/image-name.jpg"
+"desc" => "你的团队 Logo 例如 TEAM-S, 不是网站图标"
 ),
 
 
 array(
-"name" => "Retina display logo image",
+"name" => "视网膜屏幕的 logo 图像",
 "id" => PEXETO_SHORTNAME."_retina_logo_image",
 "type" => "upload",
-"desc" => "You can set a custom logo image for retina displays. The image size for retina displays should be twice the size of the regular logo - for example if the standard logo
-image size is 30x70 pixels, the size of the retina display logo image should be 60x140 pixels. If you don't set an image in this field, the image set in the \"Logo Image\" field above will be used."
+"desc" => "针对苹果设备视网膜屏幕的 logo, 尺寸为上面 logo 图像的 4 倍. 例如上面图片尺寸为 143 x 28, 则这里的尺寸为 286 x 56."
 ),
 
 
 array(
-"name" => "Logo image width",
+"name" => "Logo 图像宽度",
 "id" => PEXETO_SHORTNAME."_logo_width",
 "type" => "text",
-"desc" => "The logo image width in pixels- default:143"
+"desc" => "Logo 图像宽度, 单位为像素 - 默认:143"
 ),
 
 
 array(
-"name" => "Logo image height",
+"name" => "Logo 图像高度",
 "id" => PEXETO_SHORTNAME."_logo_height",
 "type" => "text",
-"desc" => "The logo image height in pixels- default:28"
+"desc" => "Logo 图像高度, 单位像素 - 默认:28"
 ),
 
 array(
-"name" => "Display site tagline next to logo",
+"name" => "在 logo 旁显示副标题",
 "id" => PEXETO_SHORTNAME."_display_tagline",
 "type" => "checkbox",
 "std" => 'on',
-"desc" => 'You can set the Tagline in Settings &raquo; General &raquo; Tagline'
+"desc" => '你可以说在 设置 &raquo; 常规 &raquo; 副标题 中设置你的副标题'
 ),
 
 
@@ -287,7 +283,7 @@ array(
 "desc"=>"In this field you can add or remove Google Fonts to the theme. Please note that only the font
 URL should be inserted here (the value that is set within the 'href' attribute of the embed link tag Google provides), not the whole embed link tag.
 <b>Example:</b><br />
-http://fonts.googleapis.com/css?family=Lato<br />
+http://fonts.useso.com/css?family=Lato<br />
 <br />In order to enable the new font for the theme, simply add its name before the other font names in the Font Family fields below."
 
 ),

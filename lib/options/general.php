@@ -62,23 +62,22 @@ array(
 "id" => PEXETO_SHORTNAME."_disable_click",
 "type" => "checkbox",
 "std" => 'off',
-"desc" => 'If "ON" selected, right click will be disabled for the theme in order to add copyright protection to images.
-If you insert a text in the "Message on right click" field below, this message will be alerted.'
+"desc" => '如果打开, 则会禁止鼠标右键来保护你的相片的版权. 如果你在下面的 鼠标右键提示信息 中填入内容, 则会产生相应提示.'
 ),
 
 array(
 "name" => "鼠标右键提示信息",
 "id" => PEXETO_SHORTNAME."_click_message",
 "type" => "textarea",
-"desc" => "This is the message that is displayed when the mouse right click is disabled. If you leave the field empty, no message will be alerted."
+"desc" => "当禁止鼠标右键时, 点击鼠标右键会提示的内容. 如果留空则不会提示."
 ),
 
 
 array(
-"name" => "Google Analytics Code",
+"name" => "百度统计代码",
 "id" => PEXETO_SHORTNAME."_analytics",
 "type" => "textarea",
-"desc" => "You can paste your generated Google Analytics here and it will be automatically set to the theme."
+"desc" => "在这里填入生成的百度统计的代码."
 ),
 
 array(
