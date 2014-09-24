@@ -20,7 +20,7 @@ $pexeto_styles_options=array(array(
 
 array(
 "type" => "open",
-"subtitles"=>array(array("id"=>"general", "name"=>"General"), array("id"=>"logo", "name"=>"Logo"), array("id"=>"bg", "name"=>"Background Options"), array("id"=>"text", "name"=>"Text Styles"), array("id"=>"fonts", "name"=>"Fonts"))
+"subtitles"=>array(array("id"=>"general", "name"=>"常规"), array("id"=>"logo", "name"=>"Logo"), array("id"=>"bg", "name"=>"背景选项"), array("id"=>"text", "name"=>"文字样式"), array("id"=>"fonts", "name"=>"字体"))
 ),
 
 /* ------------------------------------------------------------------------*
