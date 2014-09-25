@@ -1,7 +1,7 @@
 <?php
 
 $pexeto_general_options= array( array(
-"name" => "Documentation",
+"name" => "文档",
 "type" => "title",
 "img" => PEXETO_IMAGES_URL."icon_doc.png"
 ),
@@ -18,7 +18,7 @@ array(
 
 array(
 "type" => "documentation",
-"text" => '<h2>Documentation</h2><p> Please note that there is a documentation included where all the theme customization settings are explained. The documentation
+"text" => '<h2>文档</h2><p> Please note that there is a documentation included where all the theme customization settings are explained. The documentation
 is located within the <strong>documentation</strong> folder of the main zip file you have downloaded. </p>
 <h2>If you have any questions</h2>
 <p>We will do our best to assist with questions directly related to 

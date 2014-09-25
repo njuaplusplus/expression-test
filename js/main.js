@@ -466,6 +466,7 @@ jQuery.support.placeholder = (function(){
 				args = {
 					width: "100%",
 					height: "auto",
+					left: left,
 					top: mtop
 				};
 			} else {

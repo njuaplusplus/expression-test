@@ -36,5 +36,6 @@ if(get_opt('_show_footer_icons')=='on'){
 <!-- FOOTER ENDS -->
 
 <?php wp_footer(); ?>
+<?php echo(get_opt('_analytics')); ?>
 </body>
 </html>

@@ -159,7 +159,6 @@ jQuery(document).ready(function($){
 <!--[if lte IE 8]>
 <link href="<?php echo get_template_directory_uri(); ?>/css/style_ie8.css" rel="stylesheet" type="text/css" />  
 <![endif]-->
-<?php echo(get_opt('_analytics')); ?>
 
 </head>
 <body <?php body_class(); ?>>
